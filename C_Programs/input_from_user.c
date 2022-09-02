@@ -1,9 +1,11 @@
 #include<stdio.h>
+#include<ctype.h>
 int main()
 {
 	int a,b;
 	float c,d;
 	char e,g,h;
+	char str[50];
 
 	printf("\nThis program is about getting inputs from user\n");
 
@@ -21,15 +23,21 @@ int main()
 
 	//Char type input from user(using scanf)
 	printf("\nEnter a character :");
-	scanf(" %c",&e);
+	scanf("\n%c",&e);
 	printf("\nThe character you entered is : %c",e);
 
 	//Char type input from user(using getchar())
 	printf("\nEnter a character :");
-	fflush(stdin);
-	g = getchar();
+	scanf("\n");
+	g=getchar();
 	printf("The Entered character is : ");
 	putchar(g);
+
+	//String type input from user
+	printf("\nEnter a string : ");
+	scanf("\n");
+	gets(str);
+	printf("\nThe string is : %s\n",str);
 
 	return 0;
 }
